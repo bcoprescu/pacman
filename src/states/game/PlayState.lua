@@ -188,6 +188,10 @@ function PlayState:render()
     self.player:render(offset)
     
     love.graphics.setColor(255/255, 255/255, 1/255, 1)
+
+    love.graphics.setFont(gFonts['robo'])
+    love.graphics.printf("Level 1", 0, 5, VIRTUAL_WIDTH, 'left')
+
     love.graphics.setFont(gFonts['small'])
     love.graphics.printf("Score: " .. tostring(self.score), 0, 0, VIRTUAL_WIDTH, 'right')
     love.graphics.setColor(1, 1, 1, 1)

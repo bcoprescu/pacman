@@ -20,7 +20,7 @@ end
 
 function StartState:render()
     love.graphics.draw(gTextures['base'], gFrames['background'][1], 
-        0, 0)
+        0, 5)
     love.graphics.draw(gTextures['base'], gFrames['banner'][1], 
         -5, VIRTUAL_HEIGHT / 2 - 60)
 
