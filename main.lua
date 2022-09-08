@@ -6,21 +6,21 @@
 ]]
 
 require("lldebugger").start()
+
+love.graphics.setDefaultFilter('nearest', 'nearest')
 require 'src/dependencies'
 
 
 function love.load()
     math.randomseed(os.time())
     love.window.setTitle('Pacman')
-    -- love.graphics.setDefaultFilter('nearest', 'nearest')
+    love.graphics.setFont(gFonts['medium'])
 
     push:setupScreen(VIRTUAL_WIDTH, VIRTUAL_HEIGHT, WINDOW_WIDTH, WINDOW_HEIGHT, {
         fullscreen = false,
         vsync = true,
         resizable = true
     })
-
-    -- love.graphics.setFont(gFonts['small'])
 
     gStateMachine = StateMachine {
         ['start'] = function() return StartState() end,
